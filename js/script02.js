@@ -102,4 +102,47 @@ $(function(){
     setTimeout(typing, 1500);
 
 
+    
+
+
+
+    var options = {
+        text:"",
+        textEffect:"neon",
+        position:"top-left",
+        starCount: 15,
+        staticStarCount: 30,
+    };
+    var div = new Hakademy.util.meteor(".meteor", options);
+
+    // $("input:not([type=checkbox])").on("input", function(){
+    //     changeOptions($(this).attr("name"), $(this).val());
+    // });
+    // $("input[type=checkbox]").change(function(){
+    //     if($(this).prop("checked"))
+    //         changeOptions($(this).attr("name"), $(this).val());
+    //     else
+    //         changeOptions($(this).attr("name"), null);
+    // });
+
+    optionDisplay();
+
+    function changeOptions(k, v){
+        div.set(k, v);
+        
+        optionDisplay();
+    };
+    function optionDisplay(){
+        var line = "<ul>";
+        for(var i in div.options){
+            var str = "[" + i + "] : " + div.options[i];
+            line += "<li>";
+            line += str;
+            line += "</li>";
+        }
+        line += "</ul>";
+        $(".option-display").html(line);
+    };    
+
+
 });
