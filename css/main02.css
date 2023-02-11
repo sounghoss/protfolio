@@ -93,6 +93,8 @@ section.main-section .left .profiles .profile-image {
 
 section.main-section .left .profiles .profile-image img {
   width: 100%;
+  max-width: 575px;
+  max-height: 720px;
 }
 
 section.main-section .left .profiles .profile-desc {
@@ -147,6 +149,16 @@ section.main-section .left .line {
   display: block;
   width: 2px;
   height: 0vh;
+  background: #ffffff;
+}
+
+section.main-section .left .line-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 2px;
   background: #ffffff;
 }
 

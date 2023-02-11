@@ -13,6 +13,12 @@ $(function(){
             opacity: '0.5'
         },1000);
 
+        $('section .left .line-bottom').delay(1500).animate({
+            width: '100%'
+        },1000,'swing').animate({
+            opacity: '0.5'
+        },1000);
+
         $('section .right .line').delay(1500).animate({
             width: '100%'
         },1000,'swing').animate({
@@ -31,7 +37,7 @@ $(function(){
         loop : true,
         loopAdditionalSlides : 1,
         auto: true,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 40,
         autoplay: {
             delay: 3000,
@@ -44,6 +50,12 @@ $(function(){
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        breakpoints: { //반응형 width 
+
+            600: { slidesPerView: 2,},
+            768: { slidesPerView: 3, }, 
+            1400: { slidesPerView: 4, },
         },
     });
 

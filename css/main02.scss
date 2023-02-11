@@ -30,9 +30,6 @@ a{
 html{
     scroll-behavior: smooth;
 }
-section{
-    // overflow: hidden;
-}
 body{
     background: $portflio-black;
 }
@@ -90,6 +87,8 @@ section.main-section{
                 justify-content: center;
                 img{
                     width: 100%;
+                    max-width: 575px;
+                    max-height: 720px;
                 }
             }
             .profile-desc{
@@ -135,6 +134,15 @@ section.main-section{
             display: block;
             width: 2px;
             height: 0vh;
+            background: $portflio-white;
+        }
+        .line-bottom{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 0;
+            height: 2px;
             background: $portflio-white;
         }
     }
@@ -485,3 +493,5 @@ section.main-section{
         }
     }
 }
+
+
